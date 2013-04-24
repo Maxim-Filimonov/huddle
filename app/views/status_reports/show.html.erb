@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @status_report.project %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @status_report.user %>
+</p>
+
+<p>
+  <strong>Yesterday:</strong>
+  <%= @status_report.yesterday %>
+</p>
+
+<p>
+  <strong>Today:</strong>
+  <%= @status_report.today %>
+</p>
+
+<p>
+  <strong>Status date:</strong>
+  <%= @status_report.status_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_status_report_path(@status_report) %> |
+<%= link_to 'Back', status_reports_path %>

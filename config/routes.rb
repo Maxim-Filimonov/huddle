@@ -1,4 +1,6 @@
 Huddle::Application.routes.draw do
+  resources :status_reports
+
   resources :projects
 
   devise_for :users

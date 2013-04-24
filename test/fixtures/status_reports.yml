@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  project_id: 
+  user_id: 
+  yesterday: MyText
+  today: MyText
+  status_date: 2013-04-24
+
+two:
+  project_id: 
+  user_id: 
+  yesterday: MyText
+  today: MyText
+  status_date: 2013-04-24
