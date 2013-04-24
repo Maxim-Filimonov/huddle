@@ -36,4 +36,5 @@ gem 'jbuilder', '~> 1.0.1'
 
 # To use debugger
 # gem 'debugger'
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
+gem 'protected_attributes'
