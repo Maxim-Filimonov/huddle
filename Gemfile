@@ -16,6 +16,8 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+gem 'minitest'
+gem 'minitest-reporters'
 
 gem 'jquery-rails'
 
@@ -25,6 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
+gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -36,5 +39,3 @@ gem 'jbuilder', '~> 1.0.1'
 
 # To use debugger
 # gem 'debugger'
-gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
-gem 'protected_attributes'
