@@ -1,5 +1,6 @@
 class StatusReportsController < ApplicationController
   before_action :set_status_report, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_if_not_current_user, :only => [:create]
 
   # GET /status_reports
   # GET /status_reports.json
@@ -24,7 +25,7 @@ class StatusReportsController < ApplicationController
   # POST /status_reports
   # POST /status_reports.json
   def create
-    @status_report = StatusReport.new(status_report_params)
+    @status_report = StatusReport.new(status_report_params.merge!(user_id: current_user.id, project_id: current_project.id))
 
     respond_to do |format|
       if @status_report.save
@@ -69,6 +70,6 @@ class StatusReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def status_report_params
-      params.require(:status_report).permit(:project_id, :user_id, :yesterday, :today, :status_date)
+      params.require(:status_report).permit(:user_id, :yesterday, :today, :status_date)
     end
 end

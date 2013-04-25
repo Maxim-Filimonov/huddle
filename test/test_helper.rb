@@ -12,4 +12,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def login_as_one
+    sign_in(users(:one))
+  end
+  def set_current_project(project_name)
+    @request.session[:project_id] = projects(project_name).id
+  end
 end

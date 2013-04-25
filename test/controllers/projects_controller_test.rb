@@ -1,9 +1,11 @@
 require 'test_helper'
 
 class ProjectsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
   setup do
     @project = projects(:one)
   end
+  setup :login_as_one
 
   test "should get index" do
     get :index
