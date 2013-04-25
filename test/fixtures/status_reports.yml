@@ -1,15 +1,39 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  project_id: 1
-  user_id: 1
   yesterday: I did stuff
   today: I'll do stuff
   status_date: 2013-04-24
 
 two:
-  project_id: 
-  user_id: 
   yesterday: MyText
   today: MyText
   status_date: 2013-04-24
+
+one_tue:
+  project: huddle
+  user: one
+  yesterday: Workend on Huddle UI
+  today: Doing some testing
+  status_date: 2009-01-06
+
+one_wed:
+  project: huddle
+  user: one
+  yesterday: Did some Testing
+  today: More testing
+  status_date: 2009-01-07
+
+two_tue:
+  project: huddle
+  user: two
+  yesterday: set up huddle schema
+  today: pair programming with one
+  status_date: 2009-01-06
+
+two_wed:
+  project: huddle
+  user: two
+  yesterday: sick
+  today: trying to pair again
+  status_date: 2009-01-07

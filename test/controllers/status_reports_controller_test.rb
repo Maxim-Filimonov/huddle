@@ -17,6 +17,16 @@ class StatusReportsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
+  test 'new form has expected elements' do
+    get :new
+    assert_select 'form[id=new_status_report][action=/status_reports]' do
+      assert_select "#status_report_project", count: 0
+      assert_select '#status_report_user', count: 0
+      assert_select 'textarea#status_report_today'
+      assert_select 'textarea#status_report_yesterday'
+      assert_select '#status_report_status_date_1i', count: 0
+    end
+  end
 
   test 'creation of status report with data' do
     set_current_project(:one)

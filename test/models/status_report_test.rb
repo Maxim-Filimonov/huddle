@@ -25,4 +25,11 @@ class StatusReportTest < ActiveSupport::TestCase
     actual = StatusReport.new today: '', yesterday: 'yesterday'
     assert actual.valid?
   end
+  test 'by user name should sort as expected' do
+    reports = StatusReport.by_user_name
+    p reports.map {|r| r.user }.inspect
+    expected = reports.map { |r| r.user.email }
+    assert_equal %w(one@one.com one@one.com two@two.com two@two.com),
+                 expected
+  end
 end

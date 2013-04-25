@@ -10,6 +10,11 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @reports = @project.reports_grouped_by_day
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @project }
+    end
   end
 
   # GET /projects/new
